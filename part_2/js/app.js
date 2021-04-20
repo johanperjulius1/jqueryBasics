@@ -1,11 +1,12 @@
 
-  $('.spoiler').on('click', 'button', function(){
-    $(".spoiler span").show();
-    $(".spoiler button").hide();
+  $('.spoiler').on('click', 'button', function(e){
+    console.log(e.target)
+    // $(".spoiler span").show();
+    $(e.target).hide();
 
   });
   const $spoiler = $(
-    "<span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span><button>Reveal Spoiler</button>"
+    "<button>Reveal Spoiler</button>"
     );
   $(".spoiler").prepend($spoiler);
 $(".spoiler span").hide();
