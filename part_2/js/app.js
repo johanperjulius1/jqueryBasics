@@ -1,11 +1,14 @@
-const $spoiler =$("<span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span><button>Reveal Spoiler</button>");
-$(".spoiler").prepend($spoiler);
 
+  $('.spoiler').on('click', 'button', function(){
+    $(".spoiler span").show();
+    $(".spoiler button").hide();
+
+  });
+  const $spoiler = $(
+    "<span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span><button>Reveal Spoiler</button>"
+    );
+  $(".spoiler").prepend($spoiler);
 $(".spoiler span").hide();
-$(".spoiler button").click(function () {
-  $(".spoiler span").show();
-  $(".spoiler button").hide();
-});
 
 // $(".spoiler button").click(function () {
 //   if(buttonText='Reveal Spoiler'){
