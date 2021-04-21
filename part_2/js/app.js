@@ -1,8 +1,8 @@
 
   $('.spoiler').on('click', 'button', function(e){
     console.log(e.target)
-    // $(".spoiler span").show();
-    $(e.target).hide();
+    $(this).next().show();
+    $(this).hide();
 
   });
   const $spoiler = $(
